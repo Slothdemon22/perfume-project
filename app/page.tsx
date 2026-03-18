@@ -155,8 +155,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ c
       {/* FLEXIBLE CONTENT AREA */}
       <section className="flexible-area">
         <div className="content">
-          <h2>CRAFTED FOR LASTING IMPRESSIONS</h2>
-          <p>Discover carefully balanced notes designed to elevate everyday rituals and special evenings alike.</p>
+          <h2>CRAFTED FOR MEMORABLE FRAGRANCE JOURNEYS</h2>
+          <p>Discover signature perfumes with layered top, heart, and base notes made to leave an elegant trail from day to night.</p>
         </div>
       </section>
 
