@@ -28,7 +28,7 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({
         from: 'Classic Perfumes Concierge <newsletter@zalnex.me>',
-        to: 'afshalzafar0@gmail.com',
+        to: 'classicperfumes829@gmail.com',
         subject: 'New Fragrance Concierge Inquiry',
         text: [
           `Email: ${email}`,
