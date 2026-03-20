@@ -45,7 +45,7 @@ export default function Footer() {
     <footer className="main-footer">
       <div className="newsletter-section">
         <div className="newsletter-content">
-          <h3>STAY IN TOUCH WITH SHALI PARFUMS</h3>
+          <h3>STAY IN TOUCH WITH CLASSIC PERFUMES</h3>
           <p className="newsletter-subtitle">
             Share your email and fragrance preference. Our concierge will help you choose
             the right scent profile, concentration, and occasion match.

@@ -6,7 +6,7 @@ import { toast } from 'sonner';
 export default function SettingsPage() {
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [email, setEmail] = useState('admin@shali.com');
+  const [email, setEmail] = useState('admin@classicperfumes.com');
   const [heroImageUrl, setHeroImageUrl] = useState('');
   const [isSavingHero, setIsSavingHero] = useState(false);
 
@@ -112,8 +112,8 @@ export default function SettingsPage() {
   };
 
   return (
-    <div className="admin-page-container" style={{ padding: '20px' }}>
-      <div style={{ maxWidth: '700px', backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', padding: '30px' }}>
+    <div className="admin-page-container">
+      <div className="admin-form-card" style={{ maxWidth: '800px', margin: '0 auto' }}>
         <h2 style={{ fontSize: '1.6rem', marginBottom: '5px' }}>Homepage Hero Image</h2>
         <p style={{ color: '#666', marginBottom: '8px', fontSize: '0.9rem' }}>
           Upload a new hero banner image for the homepage.

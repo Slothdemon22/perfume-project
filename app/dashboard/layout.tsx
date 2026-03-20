@@ -14,6 +14,10 @@ export default function DashboardLayout({
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
+    setIsSidebarOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
     document.documentElement.classList.add('dashboard-scroll-lock');
     document.body.classList.add('dashboard-scroll-lock');
 

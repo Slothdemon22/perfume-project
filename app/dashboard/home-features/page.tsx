@@ -230,7 +230,7 @@ export default function HomeFeaturesAdmin() {
                 <div className="dropzone-container" onClick={() => fileInputRef.current?.click()} style={{ cursor: 'pointer' }}>
                   {uploading ? (
                     <>
-                      <div className="shali-spinner"></div>
+                      <div className="classic-spinner"></div>
                       <p>Uploading...</p>
                     </>
                   ) : imageUrl ? (
@@ -255,7 +255,7 @@ export default function HomeFeaturesAdmin() {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+              <div className="admin-responsive-grid" style={{ gap: '16px' }}>
                 <div className="form-group">
                   <label>Display Order</label>
                   <input

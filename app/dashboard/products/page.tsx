@@ -264,15 +264,14 @@ export default function ProductsPage() {
               />
             </div>
             
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+            <div className="admin-responsive-grid">
               <div className="form-group">
                 <label>Price String</label>
                 <input 
                   type="text" 
                   value={price} 
                   onChange={(e) => setPrice(e.target.value)} 
-                  required 
-                  placeholder="e.g. Rs. 22,900"
+                  required                    placeholder="e.g. CLASSIC PERFUMES"
                 />
               </div>
               <div className="form-group">
@@ -323,7 +322,7 @@ export default function ProductsPage() {
 
             <div className="form-group">
               <label>Fragrances</label>
-              <div style={{ display: 'flex', gap: '8px', marginTop: '5px' }}>
+              <div className="admin-responsive-grid" style={{ gap: '8px' }}>
                 <input
                   type="text"
                   value={fragranceInput}
@@ -339,7 +338,7 @@ export default function ProductsPage() {
                 <button
                   type="button"
                   className="btn-primary"
-                  style={{ padding: '0 14px', minWidth: '76px' }}
+                  style={{ minWidth: '76px' }}
                   onClick={addFragrance}
                 >
                   Add

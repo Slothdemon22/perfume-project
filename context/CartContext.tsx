@@ -33,7 +33,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   // Hydrate cart from localStorage on first client render
   useEffect(() => {
     try {
-      const stored = typeof window !== 'undefined' ? window.localStorage.getItem('shali_cart') : null;
+      const stored = typeof window !== 'undefined' ? window.localStorage.getItem('classic_perfumes_cart') : null;
       if (stored) {
         const parsed = JSON.parse(stored) as Array<CartItem & { size?: string }>;
         if (Array.isArray(parsed)) {
@@ -55,7 +55,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (!isHydrated) return;
     try {
-      window.localStorage.setItem('shali_cart', JSON.stringify(items));
+      window.localStorage.setItem('classic_perfumes_cart', JSON.stringify(items));
     } catch {
       // ignore storage write errors (e.g., private mode)
     }
