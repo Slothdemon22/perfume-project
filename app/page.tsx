@@ -9,9 +9,10 @@ import HomePageAnimations from '@/components/HomePageAnimations';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Luxury Signature Perfumes | Classic Perfumes House',
   description:
-    'Explore signature perfumes from Classic Perfumes, including woody, floral, oriental, and fresh fragrance collections.',
+    'Discover our curated collections of Woody, Floral, Oriental, and Fresh perfumes. Classic Perfumes offers timeless elegance in every bottle, crafted for lasting impressions.',
+  keywords: 'Classic Perfumes, Signature Fragrances, Luxury Niche Perfume, Woody Perfume Pakistan, Floral Scent House',
   alternates: {
     canonical: '/',
   },

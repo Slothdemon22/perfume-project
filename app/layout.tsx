@@ -6,20 +6,30 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Classic Perfumes | Classic Luxury Perfume House",
-    template: "%s | Classic Perfumes",
+    default: "Classic Perfumes | Signature Luxury Fragrances",
+    template: "%s | Classic Perfumes House",
   },
   description:
-    "Discover timeless perfumes at Classic Perfumes. Explore woody, floral, oriental, and fresh signature fragrances crafted for everyday luxury.",
+    "Explore Classic Perfumes' signature collection of luxury fragrances. From deep woody notes to fresh citrus blends, discover scents crafted for timeless elegance and memorable impressions.",
+  applicationName: "Classic Perfumes",
   keywords: [
     "Classic Perfumes",
-    "Luxury perfumes",
-    "Classic fragrances",
-    "Woody perfumes",
-    "Floral perfumes",
-    "Oriental perfumes",
-    "Perfume Pakistan",
+    "Luxury Perfume Pakistan",
+    "Signature Fragrances",
+    "Niche Perfumes",
+    "Woody Scent House",
+    "Floral Perfume Collection",
+    "Oriental Oud Fragrances",
+    "Premium Perfume Online Shop",
   ],
+  authors: [{ name: "Classic Perfumes Team" }],
+  creator: "Classic Perfumes",
+  publisher: "Classic Perfumes",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   alternates: {
     languages: {
       "en-US": "/",
@@ -29,23 +39,23 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Classic Perfumes",
-    title: "Classic Perfumes | Classic Luxury Perfume House",
+    title: "Classic Perfumes | Luxury Signature Fragrances",
     description:
-      "Shop timeless signature fragrances with a premium online experience.",
+      "Crafting timeless fragrance experiences with premium ingredients and elegant refinement.",
     images: [
       {
         url: "/images/hero_banner_1773220198541.png",
-        width: 1920,
-        height: 1080,
-        alt: "Classic Perfumes hero banner",
+        width: 1200,
+        height: 630,
+        alt: "Classic Perfumes Luxury Banner",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Classic Perfumes | Classic Luxury Perfume House",
+    title: "Classic Perfumes | Luxury Signature Fragrances",
     description:
-      "Shop timeless signature fragrances with a premium online experience.",
+      "Crafting timeless fragrance experiences with premium ingredients and elegant refinement.",
     images: ["/images/hero_banner_1773220198541.png"],
   },
   robots: {
@@ -74,17 +84,23 @@ export default function RootLayout({
   const orgJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Classic Perfumes",
-    url: siteUrl,
-    email: "care@classicperfumes.com",
-    contactPoint: [
+    "name": "Classic Perfumes",
+    "url": siteUrl,
+    "logo": `${siteUrl}/icon.png`,
+    "description": "Premium luxury fragrance house specializing in signature blends.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "PK"
+    },
+    "contactPoint": [
       {
         "@type": "ContactPoint",
-        telephone: "+92-327-4402705",
-        contactType: "customer support",
-        areaServed: "PK",
-      },
-    ],
+        "telephone": "+92-327-4402705",
+        "contactType": "customer service",
+        "areaServed": "PK",
+        "availableLanguage": "English"
+      }
+    ]
   };
 
   return (

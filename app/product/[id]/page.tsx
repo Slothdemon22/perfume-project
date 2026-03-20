@@ -39,23 +39,24 @@ export async function generateMetadata({
     `${product.name} in ${product.category?.name || 'premium collection'} at ${product.price}.`;
 
   return {
-    title: product.name,
+    title: `${product.name} | Signature Fragrance`,
     description,
+    category: product.category?.name,
     alternates: {
       canonical: `/product/${product.id}`,
     },
     openGraph: {
       type: 'website',
       url: `${siteUrl}/product/${product.id}`,
-      title: `${product.name} | Classic Perfumes`,
+      title: `${product.name} - Luxury Scent | Classic Perfumes`,
       description,
       images: product.image
-        ? [{ url: product.image, alt: product.name }]
+        ? [{ url: product.image, width: 800, height: 800, alt: product.name }]
         : undefined,
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${product.name} | Classic Perfumes`,
+      title: `${product.name} | Classic Perfumes House`,
       description,
       images: product.image ? [product.image] : undefined,
     },
@@ -97,9 +98,33 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
 
   const allImages = [product.image, ...(product.gallery || [])];
 
+  const productJsonLd = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": product.name,
+    "image": [product.image, ...(product.gallery || [])],
+    "description": product.description || `Luxury signature perfume: ${product.name}`,
+    "sku": product.sku || `CP-${product.id}`,
+    "brand": {
+      "@type": "Brand",
+      "name": "Classic Perfumes"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": `${siteUrl}/product/${product.id}`,
+      "priceCurrency": "PKR",
+      "price": product.price.replace(/[^0-9]/g, ''),
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
   return (
     <>
       <Navbar />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
       <div className="product-details-container">
         {/* Breadcrumb */}
         <div className="product-breadcrumb">
