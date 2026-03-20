@@ -482,7 +482,14 @@ h3 {
 
 @media (max-width: 520px) {
     .popular-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .popular-info .product-title {
+        font-size: 0.6rem;
+    }
+    .popular-info .product-category {
+        font-size: 0.65rem;
     }
 }
 
